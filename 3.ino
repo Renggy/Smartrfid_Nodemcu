@@ -29,6 +29,9 @@ void Post_Data(String Paimin) {
   if(HttpResponseCode > 0){
     String Data_Json = Http.getString(); 
     Parsing_Json_Post(Data_Json);
+    digitalWrite(D8,HIGH);
+    delay(100);
+    digitalWrite(D8,LOW);
   }
   else{
     Serial.println(HttpResponseCode);
@@ -196,6 +199,7 @@ void setup(){
   delay(2000);
   display.setContrast(255);
   display.setFont(ArialMT_Plain_10);
+  pinMode(D8,OUTPUT);
 }
 void loop (){
   if(WiFi.status()== WL_CONNECTED){
