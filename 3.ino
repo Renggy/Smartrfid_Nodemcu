@@ -13,7 +13,7 @@
 MFRC522 Mfrc522(SS_PIN, RST_PIN);
 SH1106 display(0x3C, D2, D1);
 
-const char* Status     = "3";
+const char* Status     = "33";
 const char* Ssid       = "BARISTAND"     ;
 const char* Password   = "aspirasi165"  ;
 const char* GetsName   = "http://192.168.43.37/smart_rfid/gets_data.php?RFID=";
